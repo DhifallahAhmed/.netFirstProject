@@ -14,7 +14,7 @@ namespace AM.ApplicationCore.Domain
         {
         }
 
-        public Plane(PlaneType planeType, DateTime manufactureDate, string capacity, int planeID, ICollection<Flight> flights)
+        public Plane(PlaneType planeType, DateTime manufactureDate, int capacity, int planeID, ICollection<Flight> flights)
         {
             PlaneType = planeType;
             ManufactureDate = manufactureDate;
@@ -25,7 +25,7 @@ namespace AM.ApplicationCore.Domain
 
         public PlaneType PlaneType { get; set; }
         public DateTime ManufactureDate { get; set; }
-        public string Capacity { get; set; }
+        public int Capacity { get; set; }
         public int PlaneID { get; set; }
         public ICollection<Flight> Flights { get; set; }
         public override string ToString()

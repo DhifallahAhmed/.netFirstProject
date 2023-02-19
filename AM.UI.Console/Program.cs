@@ -26,7 +26,8 @@
 //}
 
 using AM.ApplicationCore.Domain;
-
+using AM.ApplicationCore.Service;
+using System.Collections;
 Personne personne = new Personne();
 personne.Id = 0;
 personne.Nom = "foulen";
@@ -45,16 +46,21 @@ passenger.PassengerType();
 
 Console.WriteLine();
 
-Staff staff = new Staff();
+Passenger staff = new Staff();
 staff.PassengerType();
 
-Console.WriteLine();
 
-Traveller traveller = new Traveller();
-traveller.PassengerType();
 
-Console.ReadLine();
-    
+
+ServiceFlight sf = new ServiceFlight();
+
+sf.Flights = TestData.listFlights;
+
+
+foreach (var item in sf.GetFlightDates("Madrid"))
+Console.WriteLine(item);
+
+sf.GetFlights("Destination", "Paris");
 
 
 

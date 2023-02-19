@@ -24,7 +24,7 @@ namespace AM.ApplicationCore.Domain
         public int Salary { get; set; }
         public override string ToString()
         {
-            return $"EmployementDate: {EmployementDate}, Function: {Function}, Salary: {Salary}";
+            return base.ToString()+ $"EmployementDate: {EmployementDate}, Function: {Function}, Salary: {Salary}";
         }
         public override void PassengerType()
         {

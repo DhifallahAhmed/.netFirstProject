@@ -12,7 +12,7 @@ namespace AM.ApplicationCore.Domain
         {
         }
 
-        public Flight(string effectiveArrival, string departure, string destination, DateTime estimatedDuration, DateTime flightDate, int flightId, Plane plane, ICollection<Passenger> passengers)
+        public Flight(DateTime effectiveArrival, string departure, string destination, int estimatedDuration, DateTime flightDate, int flightId, Plane plane, ICollection<Passenger> passengers)
         {
             EffectiveArrival = effectiveArrival;
             Departure = departure;
@@ -24,10 +24,10 @@ namespace AM.ApplicationCore.Domain
             this.Passengers = Passengers;
         }
 
-        public string EffectiveArrival { get; set; }
+        public DateTime EffectiveArrival { get; set; }
         public string Departure { get; set; }
         public string Destination { get; set; }
-        public DateTime EstimatedDuration { get; set; }
+        public int EstimatedDuration { get; set; }
         public DateTime FlightDate { get; set; }
         public int FlightId { get; set; }
         public Plane Plane { get; set; }
